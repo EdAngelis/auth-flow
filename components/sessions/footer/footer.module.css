@@ -1,0 +1,19 @@
+.footer {
+  background-color: var(--blue-400);
+  color: #fff;
+  padding: 0.1rem 0;
+  width: 100%;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.whatsappLink {
+  color: var(--color-whatsapp);
+  text-decoration: none;
+}

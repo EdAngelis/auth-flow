@@ -1,0 +1,27 @@
+:root {
+  --blue-50: #ebf8ff;
+  --blue-100: #bee3f8;
+  --blue-200: #90cdf4;
+  --blue-300: #63b3ed;
+  --blue-400: #4299e1;
+  --blue-500: #3182ce;
+  --blue-600: #2b6cb0;
+  --blue-700: #2c5282;
+  --blue-800: #2a4365;
+  --blue-900: #1a365d;
+  --sky-700: #167699;
+  --sky-300: #a2c8d6;
+
+  --redwrong: #ff0000; /* Removed hyphen */
+  --greencorrect: #00ff00; /* Removed hyphen */
+  --score-pass: green;
+  --color-whatsapp: #25D366;
+  --score-fail: red;
+  --option-correct-bg: rgba(0, 255, 0, 0.1); /* Slight green background */
+  --option-incorrect-bg: rgba(255, 0, 0, 0.1); /* Slight red background */
+}
+
+body {
+  max-width: 1400px;
+  margin: 0 auto;
+}

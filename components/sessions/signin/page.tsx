@@ -13,6 +13,7 @@ import Button from "@/components/elements/button/button";
 import Link from "next/link";
 import ErrorToast from "@/components/elements/errors/error";
 import Loader  from "@/components/elements/loader/loader";
+import Form from "@/components/elements/form/form";
 
 const SignIn = () => {
 
@@ -69,7 +70,7 @@ const SignIn = () => {
     <>
 
     <div className={styles.page}>      
-      <form onSubmit={handleSubmit(onSubmit)} className={styles.container}>
+      <Form onSubmit={handleSubmit(onSubmit)} >
         <h2 className={styles.title}>Bem vindo de volta!</h2>
         <div className={styles.slot}>
           <Label text="E-mail" />
@@ -102,7 +103,7 @@ const SignIn = () => {
           <span>ou</span>
         </div>
         <GoogleSignIn />
-      </form>
+      </Form>
     </div>
     </>
   );

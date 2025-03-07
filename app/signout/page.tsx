@@ -6,6 +6,7 @@ import * as Yup from "yup";
 import { createUser } from "../../service/user.service";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
+import Form from "@/components/elements/form/form";
 
 export default function Register() {
   const router = useRouter();
@@ -23,7 +24,7 @@ export default function Register() {
       .oneOf([Yup.ref("password"), undefined], "Passwords must match")
       .required("Confirm Password is required"),
   });
-
+  
   const {
     register,
     handleSubmit,
@@ -62,9 +63,9 @@ export default function Register() {
   };
 
   return (
-    <div>
+    <main>
       <div className={styles.page}>
-        <form onSubmit={handleSubmit(onSubmit)} className={styles.container}>
+        <Form onSubmit={handleSubmit(onSubmit)}>
           <h2 className={styles.title}>Register</h2>
 
           {successMessage && <p className={styles.success}>{successMessage}</p>}
@@ -98,8 +99,8 @@ export default function Register() {
               Cancel
             </button>
           </div>
-        </form>
+        </Form>
       </div>
-    </div>
+    </main>
   );
 }

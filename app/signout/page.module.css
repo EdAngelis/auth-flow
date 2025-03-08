@@ -59,3 +59,28 @@
 .button:hover {
   background-color: var(--blue-700);
 }
+
+.signin {
+
+  width: 100%;
+  padding: 10px 0;
+
+  margin-top: 10px;
+
+  text-align: center;
+
+}
+
+.signin a {
+
+  font-size: small;
+  text-decoration: none;
+  color: black;
+
+}
+
+.signin strong {
+
+  color: var(--blue-400);
+
+}

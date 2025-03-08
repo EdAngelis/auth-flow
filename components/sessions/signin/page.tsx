@@ -11,7 +11,7 @@ import Input from "@/components/elements/input/input";
 import Label from "@/components/elements/label/label";
 import Button from "@/components/elements/button/button";
 import Link from "next/link";
-import ErrorToast from "@/components/elements/errors/error";
+import ErrorToast from "@/components/elements/toast/error";
 import Loader  from "@/components/elements/loader/loader";
 import Form from "@/components/elements/form/form";
 
@@ -84,7 +84,7 @@ const SignIn = () => {
           {errors.password && <ErrorToast message={errors.password?.message} />}
         </div>
         <div className={styles.slot}>
-          <Link href="reset-password" className={styles.forgot}>Esqueceu a senha?</Link>
+          <Link href="forgot-password" className={styles.forgot}>Esqueceu a senha?</Link>
         </div>
         <div className={styles.buttonList}>
           <Button type="submit" size="full">

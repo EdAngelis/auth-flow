@@ -42,9 +42,10 @@ const SignIn = () => {
 
   const onSubmit = async (data: any) => {
     console.log("data", data);
-    try {
 
-      setisLoading(true);
+    setisLoading(true);
+
+    try {
 
       const result = await credencialSignIn("credentials", {
         redirect: false,
@@ -52,18 +53,18 @@ const SignIn = () => {
         password: data.password,
       });
 
-      setisLoading(false);
-
       if (result?.error) {
         console.error("Sign In failed", result.error);
         setError(`Credenciais Invalidas ${result.error}`);
-        // alert(`Credenciais Invalidas ${result.error}`);
       } else {
         console.log("Sign In successful");
       }
     } catch (error) {      
       console.error("Sign In failed", error);
     }
+
+    setisLoading(false);
+
   };
 
   return (

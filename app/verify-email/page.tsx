@@ -7,6 +7,7 @@ import styles from "./page.module.css";
 import ErrorToast from "@/components/elements/errors/error";
 import Loader from "@/components/elements/loader/loader";
 import { setLocale } from "yup";
+import Link from "next/link";
 
 export default function VerifyEmail() {
 
@@ -91,6 +92,11 @@ export default function VerifyEmail() {
           {error && <ErrorToast message={error} />}
           {isLoading && <Loader />}
         </div>
+
+        <div className={styles.resend}>
+             Não recebeu o códgio? <Link href="/verify-email"><strong>Reenviar Código</strong></Link>
+        </div>
+        
       </div>
       </div>
     </main>

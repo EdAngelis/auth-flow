@@ -28,6 +28,10 @@
   
 }
 
+.title {
+  text-align: center;
+}
+
 .instructions {
 
   margin: 10px;

@@ -54,7 +54,7 @@ export default function ForgotPassword() {
         
         <Form onSubmit={handleSubmit(onSubmit)}>
 
-            <h1>Esqueceu a senha?</h1>
+            <h1 className={styles.title}>Esqueceu a senha?</h1>
 
             <div className={styles.instructions}>
                 <p>Insira o seu e-mail cadastrado abaixo.</p>

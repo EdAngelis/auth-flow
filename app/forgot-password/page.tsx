@@ -15,7 +15,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import SuccessToast from "@/components/elements/toast/success";
 
-export default function VerifyEmail() {  
+export default function ForgotPassword() {  
 
   const [error, setError] = React.useState<string>('');
   const [success, setSuccess] = React.useState<string>('');

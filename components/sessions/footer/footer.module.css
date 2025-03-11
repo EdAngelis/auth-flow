@@ -53,3 +53,16 @@
   color: var(--color-whatsapp);
   text-decoration: none;
 }
+
+@media screen and (max-width: 768px) {
+  .footerContent {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .contact {
+    flex-direction: column;
+    gap: 5px;
+  } 
+  
+}

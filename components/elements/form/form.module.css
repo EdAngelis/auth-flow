@@ -16,8 +16,8 @@
 
 @media screen and (max-width: 768px) {
   .form {
-    width: 90%;
-    max-width: max-content;
+    width: 95%;
+    max-width: none;
   }
 
 }

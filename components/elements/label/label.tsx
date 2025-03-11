@@ -1,4 +1,4 @@
-import styles  from "./label.module.css";
+import styles from "./label.module.css";
 
 interface LabelProps {
     text: string
@@ -7,7 +7,7 @@ interface LabelProps {
 const Label: React.FC<LabelProps> = ({ text }) => {
 
     return (
-       
+
         <label className={styles.label}>{text}</label>
     );
 

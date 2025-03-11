@@ -11,15 +11,11 @@
 }
 
 .container {
-
   width: 30%;
   max-width: 400px;
-
   border-radius: 5px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.26);
-
   padding: 10px;
-
 }
 
 .slot {
@@ -31,9 +27,12 @@
 .buttonList {
   display: flex;
   flex-direction: row;
-  justify-content: center; /* Center horizontally */
-  gap: 1rem; /* Space between buttons */
-  margin-top: 1rem; /* Space above */
+  justify-content: center;
+  /* Center horizontally */
+  gap: 1rem;
+  /* Space between buttons */
+  margin-top: 1rem;
+  /* Space above */
 }
 
 .button {
@@ -48,7 +47,6 @@
   cursor: pointer;
   border-radius: 10px;
   transition: background-color 0.3s ease;
-
   max-width: 120px;
 }
 
@@ -57,37 +55,27 @@
 }
 
 .forgot {
-
   padding: 5px;
   font-size: smaller;
   text-decoration: none;
   color: var(--blue-400);
-
 }
 
 .register {
-
   width: 100%;
   padding: 10px 0;
-
   margin-top: 10px;
-
   text-align: center;
-
 }
 
 .register a {
-
   font-size: small;
   text-decoration: none;
   color: black;
-
 }
 
 .register strong {
-
   color: var(--blue-400);
-
 }
 
 .line {
@@ -115,7 +103,7 @@
     width: 50%;
     max-width: 500px;
   }
-  
+
 }
 
 @media screen and (max-width: 768px) {
@@ -123,6 +111,5 @@
     width: 90%;
     max-width: max-content;
   }
-  
-}
 
+}

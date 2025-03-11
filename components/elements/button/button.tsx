@@ -14,7 +14,7 @@ const Button: React.FC<ButtonProps> = ({ onClick, type, size = 'default', childr
   const classList = `${styles.button} ${styles[size]}`
 
   return (
-    <button className={classList}  type={type} onClick={onClick} disabled={disabled}>
+    <button className={classList} type={type} onClick={onClick} disabled={disabled}>
       {children}
     </button>
   );

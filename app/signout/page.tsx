@@ -99,17 +99,17 @@ export default function Register() {
             <Label text="Confirmar senha" />
             <Input register={register} name="confirmPassword" type="password" />
             {errors.confirmPassword && <ErrorToast message={errors.confirmPassword?.message} />}
-          </div>          
+          </div>
 
-          <div style={{textAlign: 'center'}}>
+          <div style={{ textAlign: 'center' }}>
             {error && <ErrorToast message={error} />}
             {isLoading && <Loader />}
           </div>
 
           <div className={styles.buttonList}>
-          <Button type="submit" size="full">
-            Registrar
-          </Button>                
+            <Button type="submit" size="full">
+              Registrar
+            </Button>
           </div>
 
           <div className={styles.signin}>

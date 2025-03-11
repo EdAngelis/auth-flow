@@ -6,11 +6,20 @@ import * as Yup from "yup";
 import { createUser } from "../../service/user.service";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
+import Form from "@/components/elements/form/form";
+import Label from "@/components/elements/label/label";
+import Input from "@/components/elements/input/input";
+import ErrorToast from "@/components/elements/errors/error";
+import { Button } from "@/components";
+import Link from "next/link";
+import Loader from "@/components/elements/loader/loader";
 
 export default function Register() {
+
   const router = useRouter();
   const [successMessage, setSuccessMessage] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+  const [error, setError] = React.useState<string>('');
+  const [isLoading, setisLoading] = React.useState<boolean>(false);
 
   const validationSchema = Yup.object().shape({
     email: Yup.string()
@@ -39,7 +48,7 @@ export default function Register() {
 
   const onSubmit = async (data: any) => {
     setSuccessMessage("");
-    setErrorMessage("");
+    setError("");
 
     try {
       const result = await createUser({
@@ -57,49 +66,52 @@ export default function Register() {
       }
     } catch (error) {
       alert("Registration failed");
-      setErrorMessage("Registration failed. Please try again.");
+      setError("Registration failed. Please try again.");
     }
   };
 
   return (
-    <div>
+    <main>
       <div className={styles.page}>
-        <form onSubmit={handleSubmit(onSubmit)} className={styles.container}>
-          <h2 className={styles.title}>Register</h2>
+        <Form onSubmit={handleSubmit(onSubmit)}>
+          <h2 className={styles.title}>Crie uma conta</h2>
 
           {successMessage && <p className={styles.success}>{successMessage}</p>}
-          {errorMessage && <p className={styles.error}>{errorMessage}</p>}
 
           <div className={styles.slot}>
-            <label>Email:</label>
-            <input type="email" {...register("email")} />
-            {errors.email && <p>{errors.email.message}</p>}
+            <Label text="E-mail" />
+            <Input register={register} name="email" type="email" />
+            {errors.email && <ErrorToast message={errors.email?.message} />}
           </div>
+
           <div className={styles.slot}>
-            <label>Senha:</label>
-            <input type="password" {...register("password")} />
-            {errors.password && <p>{errors.password.message}</p>}
+            <Label text="Senha" />
+            <Input register={register} name="password" type="password" />
+            {errors.password && <ErrorToast message={errors.password?.message} />}
           </div>
+
           <div className={styles.slot}>
-            <label>Confirmar senha:</label>
-            <input type="password" {...register("confirmPassword")} />
-            {errors.confirmPassword && <p>{errors.confirmPassword.message}</p>}
+            <Label text="Confirmar senha" />
+            <Input register={register} name="confirmPassword" type="password" />
+            {errors.confirmPassword && <ErrorToast message={errors.confirmPassword?.message} />}
+          </div>          
+
+          <div style={{textAlign: 'center'}}>
+            {error && <ErrorToast message={error} />}
+            {isLoading && <Loader />}
           </div>
 
           <div className={styles.buttonList}>
-            <button type="submit" className={styles.button}>
-              Register
-            </button>
-            <button
-              type="button"
-              onClick={() => router.push("/")}
-              className={styles.button}
-            >
-              Cancel
-            </button>
+          <Button type="submit" size="full">
+            Registrar
+          </Button>                
           </div>
-        </form>
+
+          <div className={styles.signin}>
+            <Link href="/">Já possui uma conta? <strong>Conectar</strong></Link>
+          </div>
+        </Form>
       </div>
-    </div>
+    </main>
   );
 }

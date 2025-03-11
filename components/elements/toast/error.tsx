@@ -7,7 +7,7 @@ interface ErrorProps {
 const ErrorToast: React.FC<ErrorProps> = ({ message }) => {
 
     return (
-        <p className={styles.error}>{message ?? 'Erro ao realizar login'}</p>
+        <p className={styles.error}>{message}</p>
     );
 
 }

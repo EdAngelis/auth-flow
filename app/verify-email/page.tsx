@@ -4,7 +4,7 @@ import { verifyEmail } from "@/service/auth.service";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components";
 import styles from "./page.module.css";
-import ErrorToast from "@/components/elements/errors/error";
+import ErrorToast from "@/components/elements/toast/error";
 import Loader from "@/components/elements/loader/loader";
 import { setLocale } from "yup";
 import Link from "next/link";

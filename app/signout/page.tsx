@@ -9,7 +9,7 @@ import styles from "./page.module.css";
 import Form from "@/components/elements/form/form";
 import Label from "@/components/elements/label/label";
 import Input from "@/components/elements/input/input";
-import ErrorToast from "@/components/elements/errors/error";
+import ErrorToast from "@/components/elements/toast/error";
 import { Button } from "@/components";
 import Link from "next/link";
 import Loader from "@/components/elements/loader/loader";

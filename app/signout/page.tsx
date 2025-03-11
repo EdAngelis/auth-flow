@@ -47,8 +47,10 @@ export default function Register() {
   });
 
   const onSubmit = async (data: any) => {
+
     setSuccessMessage("");
     setError("");
+    setisLoading(true);
 
     try {
       const result = await createUser({
@@ -68,6 +70,9 @@ export default function Register() {
       alert("Registration failed");
       setError("Registration failed. Please try again.");
     }
+
+    setisLoading(false);
+
   };
 
   return (

@@ -1,0 +1,8 @@
+.loader {
+    animation: spinner 1s linear infinite;
+    margin: 10px 0;
+}
+
+@keyframes spinner {
+    100% { transform: rotate(360deg) }
+  }
